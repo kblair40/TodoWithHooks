@@ -1,4 +1,5 @@
 import React from "react";
+import useToggleState from "./hooks/useToggleState";
 import ListItemText from "@material-ui/core/ListItemText";
 import ListItem from "@material-ui/core/ListItem";
 import CheckBox from "@material-ui/core/CheckBox";
@@ -8,26 +9,33 @@ import EditIcon from "@material-ui/icons/Edit";
 import ListItemSecondaryAction from "@material-ui/core/ListItemSecondaryAction";
 
 export default function Todo({ id, task, completed, removeTodo, toggleTodo }) {
+  const [isEditing, toggle] = useToggleState(false);
   return (
     <ListItem>
-      <CheckBox
-        tabIndex={-1}
-        checked={completed}
-        onClick={() => toggleTodo(id)}
-      />
-      <ListItemText
-        style={{ textDecoration: completed ? "line-through" : "none" }}
-      >
-        {task}
-      </ListItemText>
-      <ListItemSecondaryAction>
-        <IconButton aria-label="Delete" onClick={() => removeTodo(id)}>
-          <DeleteIcon />
-        </IconButton>
-        <IconButton aria-label="Edit">
-          <EditIcon />
-        </IconButton>
-      </ListItemSecondaryAction>
+      {isEditing ? (
+        <h1>Editing Time!</h1>
+      ) : (
+        <>
+          <CheckBox
+            tabIndex={-1}
+            checked={completed}
+            onClick={() => toggleTodo(id)}
+          />
+          <ListItemText
+            style={{ textDecoration: completed ? "line-through" : "none" }}
+          >
+            {task}
+          </ListItemText>
+          <ListItemSecondaryAction>
+            <IconButton aria-label="Delete" onClick={() => removeTodo(id)}>
+              <DeleteIcon />
+            </IconButton>
+            <IconButton aria-label="Edit" onClick={toggle}>
+              <EditIcon />
+            </IconButton>
+          </ListItemSecondaryAction>
+        </>
+      )}
     </ListItem>
   );
 }

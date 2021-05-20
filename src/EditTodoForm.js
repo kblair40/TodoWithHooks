@@ -1,6 +1,6 @@
 import React from "react";
 import useInputState from "./hooks/useInputState";
-import { Paper, TextField } from "@material-ui/core";
+import TextField from "@material-ui/core/TextField";
 
 export default function EditTodoForm({ editTodo, id, task, toggleEditForm }) {
   const [value, handleChange, reset] = useInputState(task);

@@ -27,6 +27,12 @@ function TodoApp() {
     );
     setTodos(updatedTodos);
   };
+  const editTodo = (todoId, newTask) => {
+    const updatedTodos = todos.map((todo) =>
+      todo.id === todoId ? { ...todo, task: newTask } : todo
+    );
+    setTodos(updatedTodos);
+  };
   return (
     <Paper
       style={{
@@ -49,6 +55,7 @@ function TodoApp() {
             removeTodo={removeTodo}
             todos={todos}
             toggleTodo={toggleTodo}
+            editTodo={editTodo}
           />
         </Grid>
       </Grid>

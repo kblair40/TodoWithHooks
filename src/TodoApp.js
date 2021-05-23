@@ -1,5 +1,4 @@
 import React from "react";
-// import useTodoState from "./hooks/useTodoState";
 import { Paper, Typography, AppBar, Toolbar, Grid } from "@material-ui/core";
 import TodoList from "./TodoList";
 import TodoForm from "./TodoForm";

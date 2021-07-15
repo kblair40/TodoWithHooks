@@ -8,13 +8,19 @@ const useStyles = makeStyles({
   paper: {
     margin: "1rem 0",
     padding: "0 1rem",
+    backgroundColor: "#1f2833",
   },
   textFieldRoot: {
     "& .MuiFormLabel-root": {
-      color: "#1F2833",
+      fontFamily: "Source Sans Pro",
+      color: "#c5c6c7",
+      fontWeight: 600,
     },
     "& .MuiInputBase-root": {
-      borderBottom: "1px solid #1f2833",
+      fontFamily: "Source Sans Pro",
+      color: "white",
+
+      borderBottom: "1px solid #45a29e",
       "&:after": {
         borderColor: "#0b0c10",
       },
@@ -39,7 +45,6 @@ function TodoForm() {
           value={value}
           onChange={handleChange}
           className={classes.textFieldRoot}
-          // InputProps={{classes: {label: }}}
           margin="normal"
           label="Add new todo"
           fullWidth

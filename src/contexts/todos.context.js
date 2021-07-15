@@ -3,8 +3,8 @@ import { useLocalStorageReducer } from "../hooks/useLocalStorageReducer";
 import todoReducer from "../reducer/todo.reducer";
 
 const defaultTodos = [
-  { id: 1, task: "Mow the lawn using goats", completed: false },
-  { id: 2, task: "Release lady bugs into garden", completed: true },
+  { id: 1, task: "Apply to dev job", completed: true },
+  { id: 2, task: "Get dev job", completed: false },
 ];
 
 export const TodosContext = createContext();

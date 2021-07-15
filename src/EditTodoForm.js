@@ -10,12 +10,22 @@ const useStyles = makeStyles({
     marginLeft: "1rem",
     width: "50%",
   },
+  paper: {
+    margin: "1rem 0",
+    padding: "0 1rem",
+    backgroundColor: "#cfc6c7",
+    backgroundColor: "#1f2833",
+  },
   textFieldRoot: {
     "& .MuiFormLabel-root": {
+      fontFamily: "Source Sans Pro",
       color: "#1F2833",
+      color: "#45a29e",
     },
     "& .MuiInputBase-root": {
-      borderBottom: "1px solid #1f2833",
+      fontFamily: "Source Sans Pro",
+      color: "white",
+      borderBottom: "1px solid #45a29e",
       "&:after": {
         borderColor: "#0b0c10",
       },

@@ -35,7 +35,7 @@ function TodoApp() {
     <Paper classes={{ root: classes.paperRoot }} elevation={0}>
       <AppBar position="static" classes={{ root: classes.appBarRoot }}>
         <Toolbar className={classes.toolbar}>
-          <Typography className={classes.headerText}>TODO</Typography>
+          <Typography className={classes.headerText}>TODOS</Typography>
         </Toolbar>
       </AppBar>
       <Grid container justify="center" style={{ marginTop: "1rem" }}>

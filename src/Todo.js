@@ -29,7 +29,7 @@ const useStyles = makeStyles({
     height: "64px",
   },
   deleteIcon: {
-    color: "#a24547",
+    color: "#f47174",
   },
   editIcon: {
     color: "#c5c6c7",
